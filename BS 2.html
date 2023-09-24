@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .header {
+        background-color: rgb(236, 236, 161);
+        color: darkblue;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header h1 {
+        margin: 0;
+      }
+      .header p {
+        display: flex;
+        align-items: center;
+        font-size: small;
+        margin-right: 30px;
+      }
+      .header p svg {
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+      .navbar {
+        background-color: darkblue;
+      }
+      .navbar a {
+        color: white;
+      }
+      .get-quote-button {
+        background-color: darkblue;
+        color: white;
+        border: white 2px solid;
+      }
+      .dropdown-menu {
+        background-color: darkblue;
+      }
+      #home {
+        color: rgb(232, 201, 144);
+      }
+      .background {
+        background-image: url("build.jpg"); 
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        text-align: center;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .background h1 {
+        font-size: 26px; 
+        font-weight: 200;
+      }
+
+      .background h2 {
+        font-size: 58px;
+        font-weight: 800;
+        margin-bottom: 40px;
+      }
+      .get-quote-button2 {
+        background-color: transparent;
+        color: white;
+        border: white 2px solid;
+        font-weight: 300;
+        padding: 15px;
+      }
+
+      .container2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .paragraph {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .paragraph:nth-child(1) {
+        background-color: darkblue;
+        color: rgb(241, 241, 170);
+        width: 33.33%;
+      }
+
+      .paragraph:nth-child(2) {
+        background-color: rgb(231, 231, 170);
+        color: rgb(100, 100, 211);
+        width: 33.33%;
+      }
+
+      .paragraph:nth-child(3) {
+        background-color: darkblue;
+        color: rgb(223, 223, 161);
+      }
+      #font {
+        image-orientation: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Builderz</h1>
+      <p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-clock"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+          />
+          <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+          />
+        </svg>
+        Opening Hour <br />
+        Mon - Fri 6:00 - 8:00
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-telephone-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+          /></svg
+        >Call US <br />
+        +002 345 6769
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-envelope-at-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"
+          />
+          <path
+            d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"
+          />
+        </svg>
+        Email us <br />
+        info@example.com
+      </p>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="home" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Project</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="pagesDropdown"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <a class="dropdown-item" href="#">Page 1</a>
+              <a class="dropdown-item" href="#">Page 2</a>
+              <a class="dropdown-item" href="#">Page 3</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button class="btn get-quote-button">Get a Quote</button>
+    </nav>
+    <div class="background">
+      <div class="container">
+        <h1>We Are Professional</h1>
+        <h2>For Your Dream Project</h2>
+        <div class="centered-text">
+          <button class="get-quote-button2">GET A QUOTE</button>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="paragraph">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-person-raised-hand"
+          viewBox="0 0 16 16"
+          id="font"
+        >
+          <path
+            d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a.998.998 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207Z"
+          />
+          <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+        </svg>
+        <h2>Expert Worker</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Labore nulla sint est
+          consequuntur distinctio, mollitia architecto fugit nemo sunt dolores
+          nobis dolor debitis saepe iure obcaecati eligendi nihil! Maxime,
+          dolore.
+        </p>
+      </div>
+
+      <div class="paragraph">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-building-fill-check"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514Z"
+          />
+          <path
+            d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7.256A4.493 4.493 0 0 0 12.5 8a4.493 4.493 0 0 0-3.59 1.787A.498.498 0 0 0 9 9.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .39-.187A4.476 4.476 0 0 0 8.027 12H6.5a.5.5 0 0 0-.5.5V16H3a1 1 0 0 1-1-1V1Zm2 1.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5Zm3 0v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"
+          />
+        </svg>
+        <h2>Quality Work</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Praesentium ullam nostrum
+          odio dicta, nisi recusandae. Nostrum et accusamus libero. Nam nesciunt
+          commodi optio quam eum ipsa, expedita omnis pariatur vitae!
+        </p>
+      </div>
+
+      <div class="paragraph">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-person-rolodex"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+          <path
+            d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1H1Zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1V2Z"
+          />
+        </svg>
+        <h2>Heading 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Reprehenderit, officia
+          harum suscipit aliquam quas perspiciatis tempore est at veniam
+          quisquam laudantium officiis aut deserunt sint, voluptatem eum
+          molestiae deleniti quod!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

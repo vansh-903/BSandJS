@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card bg-light p-4">
+        <h2 class="text-center">Registration Form</h2>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="hobbies">Hobbies</label>
+            <select class="form-control" id="hobbies" name="hobbies" required>
+              <option value="">Select Hobby</option>
+              <option value="Draw and Paint">Draw and Paint</option>
+              <option value="Knitting and Crocheting">
+                Knitting and Crocheting
+              </option>
+              <option value="Reading Books">
+                Reading Books (You can even read children's books.)
+              </option>
+              <option value="Playing Games">
+                Playing Games (Board games, video games, computer games, mobile
+                games)
+              </option>
+              <option value="Make Stuff">
+                Make Stuff (Build something with Lego or create dishes with cake
+                mold.)
+              </option>
+            </select>
+          </div>
+          <button
+            type="button"
+            class="btn btn-danger text-white"
+            id="submitButton"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function () {
+        
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          var hobbies = document.getElementById("hobbies").value;
+
+          if (name === "") {
+            alert("Name is required");
+            return;
+          }
+
+          if (email === "") {
+            alert("Email is required");
+            return;
+          }
+
+          if (password === "") {
+            alert("Password is required");
+            return;
+          }
+
+          document.getElementById("registrationForm").submit();
+        });
+    </script>
+  </body>
+</html>

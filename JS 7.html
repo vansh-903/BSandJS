@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.train-container {
+  width: 600px; 
+  height: 100px; 
+  position: relative;
+  overflow: hidden; 
+}
+
+img.train-engine {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0; 
+  transition: left 7s linear; 
+}
+</style>
+</head>
+<body>
+
+<h1>Train Animation</h1>
+
+<p>Click the buttons to control the animation:</p>
+<button onclick="startAnimation()">Play</button>
+<button onclick="pauseAnimation()">Pause</button>
+
+<script>
+var animationPaused = true;
+
+function startAnimation() {
+  if (animationPaused) {
+    var trainEngine = document.getElementById("train-engine");
+    trainEngine.style.left = "500px"; 
+    animationPaused = false; 
+  }
+}
+
+function pauseAnimation() {
+  var trainEngine = document.getElementById("train-engine");
+  trainEngine.style.transition = "none"; 
+  trainEngine.style.left = window.getComputedStyle(trainEngine).left; 
+  animationPaused = true;
+}
+</script>
+
+<div class="train-container">
+  <img id="train-engine" class="train-engine" src="trian.avif" alt="Train Engine">
+</div>
+
+</body>
+</html>

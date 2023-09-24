@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <b><title style="text-align: center;">Registration Form</title></b>
+    <style>
+        body{
+           text-align: center;
+        }
+        .b{
+          background-color: rgb(151, 76, 89);
+          width: 50%;
+          margin: auto;
+          
+        }
+        table {
+            background-color: rgb(212, 129, 143);
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+
+        table, th, td {
+            border: none;
+            padding: 0px;
+        }
+
+        th {
+            background-color:solid black;
+            color: white;
+        }
+        h2{
+            text-align: center;
+        }
+        .re{
+          background-color: rgb(204, 80, 80);
+        }
+    </style>
+</head>
+<h2  class="b">Registration Form </h2>
+    <form action="" id="registrationForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Re-enter Password:</td>
+                <td><input type="password" name="re_password" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required>Male
+                    <input type="radio" name="gender" value="Female" required>Female
+                </td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone_number" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><input type="text" name="state" required></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="country" required>
+                        <option value="">Choose your country</option>
+                        <option value="India">India</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages known:</td>
+                <td>
+                    <input type="checkbox" name="languages[]" value="English">English
+                    <input type="checkbox" name="languages[]" value="Kannada">Kannada
+                    <input type="checkbox" name="languages[]" value="Hindi">Hindi
+                    <input type="checkbox" name="languages[]" value="Telugu">Telugu
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="text-align: left;"><input type="checkbox" name="declaration" required>
+                    Hereby I declare all the given details are true
+                    </p> 
+                    
+                        <p style="text-align: right;">Log in to<a href="https://codemithra.com/"> Ethnus</a> Website </p>
+                </td>
+              </table><br>
+              <input class="re" type="submit" value="Register">
+    </form>
+    <script>
+        function validateForm() {
+         
+            var firstName = document.querySelector('input[name="first_name"]').value;
+            var lastName = document.querySelector('input[name="last_name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+            var rePassword = document.querySelector('input[name="re_password"]').value;
+    
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
+            if (firstName === '') {
+                alert('First Name is required.');
+                return false;
+            }
+    
+            if (lastName === '') {
+                alert('Last Name is required.');
+                return false;
+            }
+    
+            if (email === '') {
+                alert('Email is required.');
+                return false;
+            } else if (!emailRegex.test(email)) {
+                alert('Invalid email format.');
+                return false;
+            }
+    
+            if (password === '') {
+                alert('Password is required.');
+                return false;
+            }
+            if (rePassword === '') {
+                alert('Re-enter Password is required.');
+                return false;
+            } else if (rePassword !== password) {
+                alert('Passwords do not match.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

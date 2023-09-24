@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>Pricing example for Bootstrap</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/pricing/"
+    />
+
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="pricing.css" rel="stylesheet" />
+    <style>
+      .pricing-header {
+        max-width: 700px;
+      }
+
+      .text-center {
+        text-align: center !important;
+      }
+      .box-shadow {
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .font-weight-normal {
+        font-weight: 400 !important;
+      }
+
+      @media (min-width: 768px) .mr-md-auto, .mx-md-auto {
+        margin-right: auto !important;
+      }
+      .mb-0,
+      .my-0 {
+        margin-bottom: 0 !important;
+      }
+      .mt-0,
+      .my-0 {
+        margin-top: 0 !important;
+      }
+      .h5,
+      h5 {
+        font-size: 1.25rem;
+      }
+      .text-dark {
+        color: #343a40 !important;
+      }
+
+      .p-2 {
+        padding: 0.5rem !important;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+      }
+      .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+      }
+
+      .btn-outline-primary {
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+      }
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .box-shadow {
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      @media (min-width: 768px) .pl-md-4, .px-md-4 {
+        padding-left: 1.5rem !important;
+      }
+      @media (min-width: 768px) .pr-md-4, .px-md-4 {
+        padding-right: 1.5rem !important;
+      }
+      .p-3 {
+        padding: 1rem !important;
+      }
+      .mb-3,
+      .my-3 {
+        margin-bottom: 1rem !important;
+      }
+      @media (min-width: 768px) .flex-md-row {
+        -webkit-box-orient: horizontal !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+      }
+      .align-items-center {
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+      .flex-column {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+      }
+      .d-flex {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+      }
+      .border-bottom {
+        border-bottom: 1px solid #dee2e6 !important;
+      }
+      .bg-white {
+        background-color: #fff !important;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+      }
+
+      .box-shadow {
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      @media (min-width: 768px) .pl-md-4, .px-md-4 {
+        padding-left: 1.5rem !important;
+      }
+      @media (min-width: 768px) .pr-md-4, .px-md-4 {
+        padding-right: 1.5rem !important;
+      }
+      .p-3 {
+        padding: 1rem !important;
+      }
+      .mb-3,
+      .my-3 {
+        margin-bottom: 1rem !important;
+      }
+      @media (min-width: 768px) .flex-md-row {
+        -webkit-box-orient: horizontal !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+      }
+      .align-items-center {
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+      .flex-column {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+      }
+      .d-flex {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+      }
+      .border-bottom {
+        border-bottom: 1px solid #dee2e6 !important;
+      }
+      .bg-white {
+        background-color: #fff !important;
+      }
+      .pricing-header {
+        max-width: 700px;
+      }
+
+      .text-center {
+        text-align: center !important;
+      }
+      @media (min-width: 768px) .pt-md-5, .py-md-5 {
+        padding-top: 3rem !important;
+      }
+      @media (min-width: 768px) .pb-md-4, .py-md-4 {
+        padding-bottom: 1.5rem !important;
+      }
+      .ml-auto,
+      .mx-auto {
+        margin-left: auto !important;
+      }
+      .mr-auto,
+      .mx-auto {
+        margin-right: auto !important;
+      }
+      .pl-3,
+      .px-3 {
+        padding-left: 1rem !important;
+      }
+      .pb-3,
+      .py-3 {
+        padding-bottom: 1rem !important;
+      }
+      .pr-3,
+      .px-3 {
+        padding-right: 1rem !important;
+      }
+      .pt-3,
+      .py-3 {
+        padding-top: 1rem !important;
+      }
+      .display-4 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      .h1,
+      h1 {
+        font-size: 2.5rem;
+      }
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 0.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .container {
+        max-width: 960px;
+      }
+
+      @media (min-width: 768px) .container {
+        max-width: 720px;
+      }
+      @media (min-width: 576px) .container {
+        max-width: 540px;
+      }
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .text-center {
+        text-align: center !important;
+      }
+
+      .mb-3,
+      .my-3 {
+        margin-bottom: 1rem !important;
+      }
+      @media (min-width: 576px) .card-deck {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .card-deck {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      .card-deck .card {
+        min-width: 220px;
+      }
+
+      @media (min-width: 576px) .card-deck .card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px;
+      }
+      .card-deck .card {
+        margin-bottom: 15px;
+      }
+      .box-shadow {
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+      }
+      .mb-4,
+      .my-4 {
+        margin-bottom: 1.5rem !important;
+      }
+      .card {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+      .card-header:first-child {
+        border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+      }
+
+      .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      }
+      .font-weight-normal {
+        font-weight: 400 !important;
+      }
+
+      .mb-0,
+      .my-0 {
+        margin-bottom: 0 !important;
+      }
+      .mt-0,
+      .my-0 {
+        margin-top: 0 !important;
+      }
+      .h4,
+      h4 {
+        font-size: 1.5rem;
+      }
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 0.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      .card-body {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+      }
+      .card-title {
+        margin-bottom: 0.75rem;
+      }
+
+      .h1,
+      h1 {
+        font-size: 2.5rem;
+      }
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 0.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      .text-muted {
+        color: #6c757d !important;
+      }
+
+      .small,
+      small {
+        font-size: 80%;
+        font-weight: 400;
+      }
+      small {
+        font-size: 80%;
+      }
+      .mb-4,
+      .my-4 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .mt-3,
+      .my-3 {
+        margin-top: 1rem !important;
+      }
+      .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+      }
+      dl,
+      ol,
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+      }
+
+      [type="reset"],
+      [type="submit"],
+      button,
+      html [type="button"] {
+        -webkit-appearance: button;
+      }
+      .btn-block {
+        display: block;
+        width: 100%;
+      }
+      .btn-group-lg > .btn,
+      .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+      }
+      .btn-outline-primary {
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+      }
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      button {
+        border-radius: 0;
+      }
+      .border-top {
+        border-top: 1px solid #e5e5e5;
+      }
+
+      @media (min-width: 768px) .pt-md-5, .py-md-5 {
+        padding-top: 3rem !important;
+      }
+      @media (min-width: 768px) .mb-md-5, .my-md-5 {
+        margin-bottom: 3rem !important;
+      }
+      @media (min-width: 768px) .mt-md-5, .my-md-5 {
+        margin-top: 3rem !important;
+      }
+      .pt-4,
+      .py-4 {
+        padding-top: 1.5rem !important;
+      }
+      .border-top {
+        border-top: 1px solid #dee2e6 !important;
+      }
+      article,
+      aside,
+      dialog,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      main,
+      nav,
+      section {
+        display: block;
+      }
+      .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      @media (min-width: 768px) .col-md {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .col-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .col,
+      .col-1,
+      .col-10,
+      .col-11,
+      .col-12,
+      .col-2,
+      .col-3,
+      .col-4,
+      .col-5,
+      .col-6,
+      .col-7,
+      .col-8,
+      .col-9,
+      .col-auto,
+      .col-lg,
+      .col-lg-1,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-auto,
+      .col-md,
+      .col-md-1,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-auto,
+      .col-sm,
+      .col-sm-1,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-auto,
+      .col-xl,
+      .col-xl-1,
+      .col-xl-10,
+      .col-xl-11,
+      .col-xl-12,
+      .col-xl-2,
+      .col-xl-3,
+      .col-xl-4,
+      .col-xl-5,
+      .col-xl-6,
+      .col-xl-7,
+      .col-xl-8,
+      .col-xl-9,
+      .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .mb-2,
+      .my-2 {
+        margin-bottom: 0.5rem !important;
+      }
+
+      img {
+        vertical-align: middle;
+        border-style: none;
+      }
+      .text-muted {
+        color: #6c757d !important;
+      }
+
+      .mb-3,
+      .my-3 {
+        margin-bottom: 1rem !important;
+      }
+      .d-block {
+        display: block !important;
+      }
+      .small,
+      small {
+        font-size: 80%;
+        font-weight: 400;
+      }
+      small {
+        font-size: 80%;
+      }
+      @media (min-width: 768px) .col-md {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .col-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .col,
+      .col-1,
+      .col-10,
+      .col-11,
+      .col-12,
+      .col-2,
+      .col-3,
+      .col-4,
+      .col-5,
+      .col-6,
+      .col-7,
+      .col-8,
+      .col-9,
+      .col-auto,
+      .col-lg,
+      .col-lg-1,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-auto,
+      .col-md,
+      .col-md-1,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-auto,
+      .col-sm,
+      .col-sm-1,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-auto,
+      .col-xl,
+      .col-xl-1,
+      .col-xl-10,
+      .col-xl-11,
+      .col-xl-12,
+      .col-xl-2,
+      .col-xl-3,
+      .col-xl-4,
+      .col-xl-5,
+      .col-xl-6,
+      .col-xl-7,
+      .col-xl-8,
+      .col-xl-9,
+      .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      list-unstyled {
+        padding-left: 0;
+        list-style: none;
+      }
+
+      dl,
+      ol,
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .text-muted {
+        color: #6c757d !important;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+      }
+      @media (min-width: 768px) .col-md {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .col-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .col,
+      .col-1,
+      .col-10,
+      .col-11,
+      .col-12,
+      .col-2,
+      .col-3,
+      .col-4,
+      .col-5,
+      .col-6,
+      .col-7,
+      .col-8,
+      .col-9,
+      .col-auto,
+      .col-lg,
+      .col-lg-1,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-auto,
+      .col-md,
+      .col-md-1,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-auto,
+      .col-sm,
+      .col-sm-1,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-auto,
+      .col-xl,
+      .col-xl-1,
+      .col-xl-10,
+      .col-xl-11,
+      .col-xl-12,
+      .col-xl-2,
+      .col-xl-3,
+      .col-xl-4,
+      .col-xl-5,
+      .col-xl-6,
+      .col-xl-7,
+      .col-xl-8,
+      .col-xl-9,
+      .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow"
+    >
+      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Pricing</h1>
+      <p class="lead">
+        Quickly build an effective pricing table for your potential customers
+        with this Bootstrap example. It's built with default Bootstrap
+        components and utilities with little customization.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $0 <small class="text-muted">/ mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-lg btn-block btn-outline-primary"
+            >
+              Sign up for free
+            </button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $15 <small class="text-muted">/ mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">
+              Get started
+            </button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $29 <small class="text-muted">/ mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">
+              Contact us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img
+              class="mb-2"
+              src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script>
+      Holder.addTheme("thumb", {
+        bg: "#55595c",
+        fg: "#eceeef",
+        text: "Thumbnail",
+      });
+    </script>
+  </body>
+</html>

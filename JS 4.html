@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <button id="dateButton">Show Date</button><br>
+    <br>
+    <button id="timeButton">Show Time</button>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('dateButton').addEventListener('click', function() {
+            const currentDate = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const dateText = currentDate.toLocaleDateString('en-US', options);
+            document.getElementById('result').textContent = `Current Date: ${dateText}`;
+        });
+
+        document.getElementById('timeButton').addEventListener('click', function() {
+            const currentTime = new Date();
+            const timeText = currentTime.toString();
+            document.getElementById('result').textContent = `Current Time: ${timeText}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            flex: 1;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="url"],
+        .form-group textarea {
+            flex: 2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" required>
+            <span id="websiteError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span id="messageError" class="error"></span>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const website = document.getElementById('website').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const websiteError = document.getElementById('websiteError');
+            const messageError = document.getElementById('messageError');
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            websiteError.textContent = '';
+            messageError.textContent = '';
+
+            let isValid = true;
+
+            if (name === '') {
+                nameError.textContent = 'Name is required';
+                isValid = false;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                emailError.textContent = 'A valid email address is required';
+                isValid = false;
+            }
+
+            const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
+            if (!urlPattern.test(website)) {
+                websiteError.textContent = 'A valid URL is required';
+                isValid = false;
+            }
+
+            if (message === '') {
+                messageError.textContent = 'Message is required';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
